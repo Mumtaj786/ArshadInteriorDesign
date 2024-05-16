@@ -1,2 +1,1 @@
-# snapchat
-practice
+Ecommerce website
