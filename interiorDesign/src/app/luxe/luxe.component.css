@@ -1,0 +1,134 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: gray;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.navbar-item {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+}
+
+.navbar-item:hover {
+  background-color: black;
+}
+
+
+  .imageAndForm-container {
+    position: relative;
+  }
+
+  .imageAndForm-container .card {
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .imageAndForm-container img {
+    width: 100%;
+    max-height: 800px;
+    border-radius: 5px 5px 0 0;
+  }
+  .form-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: gray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .icons{
+    size: 4rem;
+    color: chocolate;
+  }
+
+  .speciality{
+    font-size: 2.5em;
+    color: chocolate;
+    font-family: serif;
+  }
+
+  .additional-info{
+    font-size: 1.2em;
+    color: chocolate;
+    font-family:monospace;
+  }
+
+  .stacking-card {
+    background-color: cadetblue;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 20px;
+  }
+
+  /* .textAndCards-container {
+    display: flex;
+    width: 90%;
+    margin: 20px;
+  }
+  .column {
+    flex:1;
+    margin: 5px 10px;
+  }
+  .stack-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: goldenrod;
+  }
+
+  
+
+  
+  .textAndCards-container .stack-container .card {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.3s ease, z-index 0s ease 0.3s;
+  }
+  .textAndCards-container .stack-container .card.sticky {
+    transform: translateY(-100%);
+    z-index: 1;
+    transition: transform 0.3s ease, z-index 0s ease 0s;
+  }
+
+  .stacking-card:nth-child(1) {
+    background-color: #e57373;
+}
+
+.stacking-card:nth-child(2) {
+    background-color: #81c784;
+}
+
+.stacking-card:nth-child(3) {
+    background-color: #64b5f6;
+}
+
+.stacking-card:nth-child(4) {
+    background-color: #ffb74d;
+}
+
+.stacking-card:nth-child(5) {
+    background-color: #ba68c8;
+}
+
+.stacking-card:nth-child(6) {
+  background-color: pink;
+} */

@@ -1,0 +1,42 @@
+<form [formGroup]="form">
+    <h1>Meet a Designer</h1>
+    <div>
+      <input id="name" class="w-100" type="text" placeholder="Enter your Name" formControlName="name" maxlength="100"><br>
+      <div *ngIf="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)">
+        <small class="text-danger" *ngIf="form.get('name')?.hasError('required')">Name is required.</small>
+      </div>
+    </div><br>
+
+    <div>
+      <input id = "email" type="text" class="w-100" placeholder="Enter your Email" formControlName="email"><br>
+      <div *ngIf="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)">
+        <small class="text-danger" *ngIf="form.get('email')?.hasError('required')">Email is required.</small>
+        <small class="text-danger" *ngIf="form.get('email')?.hasError('email')">Invalid Email format.</small>
+      </div>
+    </div><br>
+    
+    <div>
+      <input id = "phome" type="number" class="w-100" placeholder="Mobile Number" formControlName="phone">
+      <div *ngIf="form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)">
+        <small class="text-danger" *ngIf="form.get('phone')?.hasError('required')">Mobile Number is required.</small>
+        <small class="text-danger" *ngIf="form.get('phone')?.hasError('pattern')">Invalid mobile number. Must be 10 digits.</small>
+      </div>
+    </div>
+  
+    <div>
+      <small>You can reach me on Whatsapp.</small>
+      <input id="checkBox" type="checkbox" formControlName="checkBox" checked><br>
+      <small class="info" *ngIf="form.get('checkBox')?.value">uncheck to opt-out of upcoming meetings and offer alerts</small>
+      <small class="info" *ngIf="!form.get('checkBox')?.value">Opt for meeting and offer updates on watsapp</small><br>    
+    </div>
+        
+    <div>
+      <input id="pincode" type="number" class="w-100" placeholder="current residence Pincode" formControlName="pincode">
+      <div *ngIf="form.get('pincode')?.invalid && (form.get('pincode')?.dirty || form.get('pincode')?.touched)">
+        <small class="text-danger" *ngIf="form.get('pincode')?.hasError('required')">Pincode is required.</small>
+      </div>
+    </div><br>
+    
+    <button id = "btn" type="submit" (click)="onSubmit()" >Book 3D design Session <span style="background-color: yellow;color: blue;">FREE</span></button><br>
+    <p class="small">By submitting this form, you agree to the <span class="text-danger">privacy policy</span> and <span class="red">terms of use</span></p>
+  </form>

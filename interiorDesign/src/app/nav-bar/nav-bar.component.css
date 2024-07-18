@@ -1,0 +1,105 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Basic styles for the navbar */
+  .navbar {
+    background-color: palevioletred;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* Style for left link */
+  .navbar-left {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  /* Style for right link */
+  .navbar-right button {
+    text-decoration: none;
+    color: red;
+    background-color: aquamarine;
+    padding:0 10px;
+    border-radius: 10px;
+  }
+  .navbar-left:hover, .navbar-right button:hover {
+    color: blue;
+    background-color: cyan;
+  }
+
+  /* Style for middle links */
+  .navbar-middle {
+    /* text-decoration: none; */
+    list-style: none;
+    display: flex;
+  }
+
+  .navbar-middle li a {
+    text-decoration: none;
+    padding-left: 40px;
+    color: blue;
+    padding-right: 20px;
+
+  }
+
+  .navbar-middle li a:hover{
+    color: aqua;
+  }
+
+  /* Style for dropdown */
+  .dropdown {
+    position: relative;
+  }
+
+  /* Style for dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  /* Style for dropdown links */
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown .dropdown-content a:hover{
+    color: red;
+  }
+
+  /* Show dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  nav#navBar a:active{
+font-weight: bold;
+color:black;
+font-size: 20px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .navbar-middle {
+      /* display: none; */
+      flex-direction: column;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+    }
+  }

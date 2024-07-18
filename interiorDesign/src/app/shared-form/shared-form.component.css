@@ -1,0 +1,20 @@
+
+  form input{
+    border: none;
+    border-bottom: black;
+  }
+
+  #checkBox{
+    float: right;
+    margin-top: 20px;
+  }
+
+  .info{
+    font-size: 11px;
+    color: gray ;
+  }
+  #btn{
+    background-color: red;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }

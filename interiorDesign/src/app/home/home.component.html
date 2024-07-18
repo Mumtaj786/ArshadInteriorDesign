@@ -1,0 +1,83 @@
+<app-nav-bar navBar></app-nav-bar>
+<div class="image-container">
+    <img src={{src}} alt = {{alt}}>
+    <div class="form-container card"> 
+      <app-shared-form form-container (formSubmit)="onFormSubmit($event)"></app-shared-form>
+
+      <!-- <h1>{{myForm.value | json}}
+      {{myForm.get('email')?.dirty|json}}</h1>
+      {{myForm.get('phone')?.hasError('pattern')}} -->
+    </div>
+    <div class="text">Hassle-free interiors from start to finish</div>
+</div>
+
+<div class="reason">
+  <h2 style="text-align: center;"> Why Choose Us</h2>
+  
+  <div class="scrolling-container">
+    <div class="icon-strip">
+1        <div class="icon-container">
+            <i class="material-icons icon">location_city</i>
+            <div class="description">22 cities</div>
+        </div>
+        <div class="icon-container">
+            <i class="material-icons icon">home</i>
+            <div class="description">35000+ <br> Homes Delivered</div>
+        </div>
+        <div class="icon-container">
+            <i class="material-icons icon">face</i>
+            <div class="description">600+ In-House Designers</div>
+        </div>
+        
+        <div class="icon-container">
+          <i class="material-icons icon">location_city</i>
+          <div class="description">22 cities</div>
+      </div>
+      <div class="icon-container">
+          <i class="material-icons icon">home</i>
+          <div class="description">35000+ <br> Homes Delivered</div>
+      </div>
+      <div class="icon-container">
+          <i class="material-icons icon">face</i>
+          <div class="description">600+ In-House Designers</div>
+      </div>
+
+      <div class="icon-container">
+        <i class="material-icons icon">location_city</i>
+        <div class="description">22 cities</div>
+    </div>
+    <div class="icon-container">
+        <i class="material-icons icon">home</i>
+        <div class="description">35000+ <br> Homes Delivered</div>
+    </div>
+    <div class="icon-container">
+        <i class="material-icons icon">face</i>
+        <div class="description">600+ In-House Designers</div>
+    </div>
+
+    <div class="icon-container">
+      <i class="material-icons icon">location_city</i>
+      <div class="description">22 cities</div>
+  </div>
+  <div class="icon-container">
+      <i class="material-icons icon">home</i>
+      <div class="description">35000+ <br> Homes Delivered</div>
+  </div>
+  <div class="icon-container">
+      <i class="material-icons icon">face</i>
+      <div class="description">600+ In-House Designers</div>
+  </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+
+
+<!-- 
+If the object accessed or function called using optinal chaining operator(?.) 
+ is undefined or null , the expression short circuits and evaluates to 
+ undefined instead of throwing an error -->

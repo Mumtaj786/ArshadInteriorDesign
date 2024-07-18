@@ -1,0 +1,89 @@
+
+<nav class="navbar">
+    <div class="navbar-left"><a href="/luxe" class="navbar-item">Luxe</a></div>
+    <div class="navbar-right"><a href="/home" class="navbar-item">Back to Home</a></div>
+</nav>
+  
+<div  [@fadeIn]="textState" class="text-center">
+  <h1>Exclusively you</h1>
+  <p>From timeless classics to modern masterpieces,
+   at Arshad Luxe, we curate homes that are "Exclusively you"</p>
+</div>
+
+<div class="imageAndForm-container  ">
+    <img src={{src}} alt = {{alt}}>
+    <div class="form-container card"> 
+      <app-shared-form (formSubmit)="onFormSubmit($event)"></app-shared-form>
+    </div>
+</div>
+
+<div>
+  <h1 style="font-family:cursive; margin-top: 10px;" class="text-center">Why Arshad Interior Design Luxe</h1>
+
+  <div class="achievements-container m-4">
+    <div class="row mt-2">
+      <div class="col text-center">
+        <div class="row icons">
+          <div class="col-4"><i class="material-icons">view_list</i></div>
+          <div class="col-4"><i class="material-icons">star</i></div>
+          <div class="col-4"><i class="material-icons">groups</i></div>
+        </div>
+        <div class="row speciality">
+          <div class="col-4"><p>Exclusive Catalogue</p></div>
+          <div class="col-4"><p>All Star Designers</p></div>
+          <div class="col-4"><p>Experienced Project Managers</p></div>
+        </div>
+        <div class="row additional-info">
+          <div class="col-4"><p>100+ designs, materials and finishes</p></div>
+          <div class="col-4"><p>50+ Premium Homes designed</p></div>
+          <div class="col-4"><p>15+ High end homes executed to perfection</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="textAndCards-container container-fluid row text-center">
+    <div class="col-4"><p>Arshad Interior Design Luxe Journey</p></div>
+    <div class="col-8 column stack-container">
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">handshake</i><div class="float-end">Step 1</div></div>
+        <div><h1>Design Consultation</h1></div>
+        <div>Start off with a studio walk
+           through and a complimentary design consultation to identify your unique style.</div>
+      </div>
+
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">A</i><div class="float-end">Step 2</div></div>
+        <div><h1> Arshad Interior Design Luxe Membership </h1></div>
+        <div>Become a member for ₹25K. Get unique design themes 
+           and moodboards crafted exclusively for your home. </div>
+      </div>
+
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">handshake</i><div class="float-end">Step 3</div></div>
+        <div><h1>Design Selection</h1></div>
+        <div>Select a theme that speaks to you. Pay 5% to begin.</div>
+      </div>
+
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">handshake</i><div class="float-end">Step 4</div></div>
+        <div><h1> Proofing</h1></div>
+        <div>Pay 15% for your selected design to be validated & 
+          checked for technical feasibility by the QC team.</div>
+      </div>
+
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">handshake</i><div class="float-end">Step 5</div></div>
+        <div><h1>Design Sign-Off</h1></div>
+        <div>Handpick colours, materials and finishes. Lock designs. 
+            Pay 30% to start production.</div>
+      </div>
+
+      <div class="stacking-card row">
+        <div><i class="material-icons float-start">done</i><div class="float-end">Step 6</div></div>
+        <div><h1>Installation</h1></div>
+        <div>Pay the final 50% to initiate installation. Move into your
+             dream home. Your vision, now a reality, is ready to be lived in and loved.</div>
+      </div>
+    </div>
+  </div>
