@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DesignGalleryComponent {
   @Input() src="../assets/images/DesignGallery.jpg";
-  @Input() atl = "Design-Gallaery";
+  @Input() alt = "Design-Gallery";
 
   constructor(private http: HttpClient, private bookDesign: BookDesignService){}
 

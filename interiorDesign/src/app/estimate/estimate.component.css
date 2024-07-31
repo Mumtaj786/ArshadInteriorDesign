@@ -1,0 +1,14 @@
+.estimate_container{
+    text-align: center;
+    background-color: lightgrey;
+}
+
+.card_container{
+    display: flex;
+    justify-content:center;
+    padding: 20px 100px;
+}
+
+.card{
+    flex: 1;
+}

@@ -16,7 +16,7 @@
   
   <div class="scrolling-container">
     <div class="icon-strip">
-1        <div class="icon-container">
+1       <div class="icon-container">
             <i class="material-icons icon">location_city</i>
             <div class="description">22 cities</div>
         </div>
@@ -30,54 +30,88 @@
         </div>
         
         <div class="icon-container">
-          <i class="material-icons icon">location_city</i>
-          <div class="description">22 cities</div>
-      </div>
-      <div class="icon-container">
-          <i class="material-icons icon">home</i>
-          <div class="description">35000+ <br> Homes Delivered</div>
-      </div>
-      <div class="icon-container">
-          <i class="material-icons icon">face</i>
-          <div class="description">600+ In-House Designers</div>
-      </div>
+            <i class="material-icons icon">location_city</i>
+            <div class="description">22 cities</div>
+        </div>
 
-      <div class="icon-container">
-        <i class="material-icons icon">location_city</i>
-        <div class="description">22 cities</div>
-    </div>
-    <div class="icon-container">
-        <i class="material-icons icon">home</i>
-        <div class="description">35000+ <br> Homes Delivered</div>
-    </div>
-    <div class="icon-container">
-        <i class="material-icons icon">face</i>
-        <div class="description">600+ In-House Designers</div>
-    </div>
+        <div class="icon-container">
+            <i class="material-icons icon">home</i>
+            <div class="description">35000+ <br> Homes Delivered</div>
+        </div>
 
-    <div class="icon-container">
-      <i class="material-icons icon">location_city</i>
-      <div class="description">22 cities</div>
-  </div>
-  <div class="icon-container">
-      <i class="material-icons icon">home</i>
-      <div class="description">35000+ <br> Homes Delivered</div>
-  </div>
-  <div class="icon-container">
-      <i class="material-icons icon">face</i>
-      <div class="description">600+ In-House Designers</div>
-  </div>
+        <div class="icon-container">
+            <i class="material-icons icon">face</i>
+            <div class="description">600+ In-House Designers</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">location_city</i>
+            <div class="description">22 cities</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">home</i>
+            <div class="description">35000+ <br> Homes Delivered</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">face</i>
+            <div class="description">600+ In-House Designers</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">location_city</i>
+            <div class="description">22 cities</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">home</i>
+            <div class="description">35000+ <br> Homes Delivered</div>
+        </div>
+
+        <div class="icon-container">
+            <i class="material-icons icon">face</i>
+            <div class="description">600+ In-House Designers</div>
+        </div>
     </div>
   </div>
   
 </div>
 
+<div>
+    <br><p style="text-align: center;">End to End Offerings</p>
+    <div class="carousel-container">
+        <button (click)="prevPage()" [disabled]="currentIndex === 0" class="nav-button">&lt;</button>
+        <div class="card-row">
+            <div *ngFor="let card of displayedCards" class="card_img">
+                <img class="img" src="{{card}}" alt="{{card}}">
+            </div>
+        </div>
+        <button (click)="nextPage()" [disabled]="currentIndex + pageSize >= cards.length" class="nav-button">&gt;</button>
+    </div>
+</div>
 
+<div class="estimate_container">
+    <div class="card">
+        <div class="card-icon"><img src="path/to/icon1.png" alt="Icon 1"></div>
+        <div class="card-heading"><h3>Full Home Interiors</h3></div>
+        <div class="card-description"><p>Get the estimate price for your full home interiors.</p></div>
+        <div class="card-button" (click)="goToEstimatePage()"><button>Get Free Estimate</button></div>
+    </div>
+    <div class="card">
+        <div class="card-icon"><img src="path/to/icon2.png" alt="Icon 2"></div>
+        <div class="card-heading"><h3>Kitchen</h3></div>
+        <div class="card-description"><p>Get costing for your kitchen interiors.</p></div>
+        <div class="card-button"><button>Get Free Estimate</button></div>
+    </div>
+</div>
+    
+  
 
 
 
 
 <!-- 
-If the object accessed or function called using optinal chaining operator(?.) 
+If the object accessed or function called using optimal chaining operator(?.) 
  is undefined or null , the expression short circuits and evaluates to 
  undefined instead of throwing an error -->

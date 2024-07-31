@@ -1,2 +1,7 @@
 <app-nav-bar></app-nav-bar>
-<app-shared-form (formSubmit)="onFormSubmit($event)"></app-shared-form>
+<div class="imageAndForm-container  ">
+    <img src={{src}} alt = {{alt}}>
+    <div class="form-container card"> 
+      <app-shared-form (formSubmit)="onFormSubmit($event)"></app-shared-form>
+    </div>
+</div>

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { BookDesignService } from '../services/book-design.service';
 import { Input } from '@angular/core';
-import { JsonPipe } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -16,10 +16,16 @@ export class HomeComponent implements OnInit{
 
   @Input() src = "../assets/images/Kitchen1.jpg";
   @Input() alt= "Kitchen Image";
-  constructor(private http: HttpClient, private bookDesign: BookDesignService) {}
+
+  cards: string[] = Array.from({ length: 8 }, (_, i) => `../assets/images/endToEnd/img${i + 1}.jpg`);
+  displayedCards: string[] = [];
+  currentIndex = 0;
+  pageSize = 4;
+
+  constructor(private http: HttpClient, private bookDesign: BookDesignService, private router: Router) {}
 
   ngOnInit() {
-
+    this.updateDisplayedCards();
   }
 
   onFormSubmit(formValue: any): void {
@@ -27,6 +33,28 @@ export class HomeComponent implements OnInit{
 
     }
 
+    updateDisplayedCards() {
+      this.displayedCards = this.cards.slice(this.currentIndex, this.currentIndex + this.pageSize);
+    }
+  
+    nextPage() {
+      if (this.currentIndex + this.pageSize < this.cards.length) {
+        this.currentIndex += this.pageSize;
+        this.updateDisplayedCards();
+      }
+    }
+  
+    prevPage() {
+      if (this.currentIndex - this.pageSize >= 0) {
+        this.currentIndex -= this.pageSize;
+        this.updateDisplayedCards();
+      }
+    }
+
+
+    goToEstimatePage() {
+      this.router.navigate(['/estimate']);
+    }
   }
 
 

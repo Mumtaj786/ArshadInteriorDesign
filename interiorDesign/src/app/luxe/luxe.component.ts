@@ -16,27 +16,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         animate('2s ease-in-out', style({ opacity: 1, fontSize:'1em' }))
       ])
     ])
-
-    // trigger('growText', [
-    //   state('start', style({
-    //     fontSize: '14px',
-    //     color: 'red',
-    //     backgroundColor:'green'
-
-    //   })),
-    //   state('end', style({
-    //     fontSize: '40px',
-    //     color: 'green',
-    //     backgroundColor:'red'
-    //   })),
-    //   transition('start => end', [
-    //     animate('4s')
-    //   ]),
-    //   transition('end => start', [
-    //     animate('4s')
-    //   ])
-    // ])
-  ]
+]
 })
 export class LuxeComponent {
   @Input() src ="../assets/images/Lotus DesignRoom.jpg" ;
@@ -46,7 +26,6 @@ export class LuxeComponent {
   constructor(private bookDesign: BookDesignService){}
   ngOnInit(){
     this.textState = 'start';
-    console.log("in init");
     this.cardsObserver();
   }
 
@@ -60,13 +39,13 @@ export class LuxeComponent {
       const cards = document.querySelectorAll('.stack-container .stacking-card');
 
   
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('sticky');
-        } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.remove('sticky');
+          }  else {
           entry.target.classList.add('sticky');
-        }
+          }
       });
     },  {
       root: null,
